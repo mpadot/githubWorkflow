@@ -27,7 +27,7 @@ if __name__ == "__main__":
         choice = Prompt.ask("[bold cyan]Which direction do you choose?[/bold cyan] [bold yellow]left[/bold yellow] or [bold yellow]right[/bold yellow] or [bold red]exit[/bold red] to leave the game.")
         choice = choice.strip().lower()
         if choice == 'exit':
-            print("Goodbye!")
+            print("[bold green]Goodbye, play again another time![/bold green]")
             break
         
         print(step(choice, events))

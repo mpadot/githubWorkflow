@@ -3,6 +3,8 @@ import random
 from rich import print
 from rich.prompt import Prompt
 
+default_message = "You stand still, unsure what to do. The forest swallows you."
+
 def step(choice: str, events):
     random_event = random.choice(events)
 
@@ -11,7 +13,9 @@ def step(choice: str, events):
     elif choice == "right":
         return right_path(random_event)
     else:
+
         return "[yellow]You stand still, unsure what to do. The forest swallows you.[/yellow]"
+
 
 def left_path(event):
     return "[blue]You walk left. [/blue]" + event
